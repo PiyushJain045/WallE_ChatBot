@@ -2712,7 +2712,7 @@ html {
   }
   
   .submit-button {
-    background-image: url("https://cdn.prod.website-files.com/67b0b836ce465610d7189b37/67b1921d179ff86f42e7cc0e_send-button_16955203.png");
+    background-image: url("/static/images/send.png");
     background-position: 50%;
     background-size: cover;
     background-attachment: scroll;
