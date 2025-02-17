@@ -2540,14 +2540,14 @@ html {
   }
   
   .chat-div {
-    scrollbar-width: None;
-    border: 9px #000;
+    scrollbar-width: none; /* Corrected from 'None' to 'none' */
+    border: 9px solid #000; /* Added 'solid' to define border style */
     width: 1044px;
     height: 700px;
     margin-top: -557px;
     margin-bottom: 7px;
     overflow: auto;
-  }
+}
   
   .bot-chat {
     border: 6px #000;
@@ -2576,16 +2576,12 @@ html {
   }
   
   .div-block-3 {
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: baseline;
-    margin-top: -47px;
-    margin-bottom: 1px;
-    padding-bottom: 48px;
     display: flex;
-  }
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start; /* Changed from 'baseline' to 'flex-start' */
+    padding-bottom: 48px;
+}
   
   .chat-text {
     -webkit-backdrop-filter: blur(5px);
