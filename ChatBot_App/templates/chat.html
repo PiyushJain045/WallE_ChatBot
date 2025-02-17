@@ -65,6 +65,11 @@
     />
   </head>
   <body class="body-2">
+
+    <audio id="background-music" autoplay loop>
+      <source src="{% static 'music/m1.mp3' %}" type="audio/mp3">
+    </audio>
+
     <div
       data-poster-url="https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-poster-00001.jpg"
       data-video-urls="https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-transcode.mp4,https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-transcode.webm"
@@ -78,7 +83,7 @@
         autoplay=""
         loop=""
         style="
-          background-image: url('https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-poster-00001.jpg');
+          background-image: url('{% static 'themes/t1.jpg' %}');
         "
         muted=""
         playsinline=""
@@ -86,7 +91,8 @@
         data-object-fit="cover"
       >
         <source
-          src="https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-transcode.mp4"
+          src="{% static 'themes/t1.mp4' %}"
+          type="video/mp4"
           data-wf-ignore="true"
         />
         <source
@@ -252,6 +258,7 @@
               data-name="Field 2"
               class="music-field w-select"
             >
+            <option value="m1">Mute</option>
               <option value="m1">Music 1</option>
               <option value="m2">Music 2</option>
               <option value="m3">Music 3</option>
