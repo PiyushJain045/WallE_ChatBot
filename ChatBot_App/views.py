@@ -23,9 +23,11 @@ class Home(View):
 
 class Chat(View):
     def get(self, request):
+        print("Inside chat get")
         return render(request, "chat.html")
 
     def post(self, request):
+        print("Inside chat post")
         prompt = request.POST.get("field")
         print(prompt)
 
@@ -41,3 +43,26 @@ class Chat(View):
         ]
 
         return render(request, "partials/chat_messages.html", {"chats":chats})
+    
+
+class Theme(View):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        print("Inside theme post")
+        theme_choice = request.POST.get("field-2")
+        print("choice:",theme_choice)
+        return render(request, "chat.html")
+    
+
+class Music(View):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        print("Inside Music post")
+        music_choice = request.POST.get("field-2")
+        print("choice:",music_choice)
+        return render(request, "chat.html")
+

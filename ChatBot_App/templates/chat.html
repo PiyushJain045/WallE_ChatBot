@@ -189,25 +189,30 @@
           </div>
         </div>
       </div>
-      <div class="features-div">
-        <div class="form-block-2 w-form">
+      
+<div class="features-div">
+    <div class="form-block-2 w-form">
+
+    <!-- ************************ -->
           <form
             id="email-form-2"
-            name="email-form-2"
             data-name="Email Form 2"
-            method="get"
+            method="POST"
+            action="{% url 'theme' %}"
             class="form"
             data-wf-page-id="67b178287aebd44cd279c739"
             data-wf-element-id="f38c5abc-91ee-fbe5-ec0f-1698dc950750"
             data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
           >
-            <input
+          {% csrf_token %}
+            <button
               type="submit"
-              data-wait="Please wait..."
               class="theme-submit w-button"
-              value="Save Theme"
-            /><label for="theme" class="theme-label">Select Theme:-</label
-            ><select
+            >Save Theme</button>
+            
+            <label for="theme" class="theme-label">Select Theme:-</label
+            >
+            <select
               id="theme"
               name="field-2"
               data-name="Field 2"
@@ -218,20 +223,23 @@
               <option value="t3">Theme 3</option>
               <option value="t4">Theme 4</option>
             </select>
+            
           </form>
-          <div class="success-message w-form-done"></div>
-          <div class="error-message w-form-fail"></div>
-        </div>
-        <div class="form-block w-form">
+
+
+  <!-- ******* -->      
           <form
             id="email-form-3"
             name="email-form-3"
             data-name="Email Form 3"
-            method="get"
+            method="POST"
+            action= "{% url 'music' %}"
             data-wf-page-id="67b178287aebd44cd279c739"
             data-wf-element-id="68c5d9ee-4a09-681b-4732-ff58a369f234"
             data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
           >
+
+          {% csrf_token %}
             <input
               type="submit"
               data-wait="Please wait..."
@@ -250,8 +258,12 @@
               <option value="m4">Music 4</option>
             </select>
           </form>
+
+  
           <div class="success-message-2 w-form-done"></div>
           <div class="error-message-2 w-form-fail"></div>
+
+    <!-- ******* -->
         </div>
       </div>
     </div>

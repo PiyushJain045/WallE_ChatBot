@@ -2738,6 +2738,8 @@ html {
     color: #e01215;
     background-color: #f3f3f300;
     width: 200px;
+  z-index: 20;
+  position: relative;
   }
   
   .music-field {
@@ -2745,7 +2747,7 @@ html {
     background-color: #f3f3f300;
     width: 200px;
     position: relative;
-    top: -80px;
+    top: -55px;
     bottom: 36px;
     left: 236px;
   }
@@ -2762,7 +2764,7 @@ html {
     width: 121px;
     font-size: 17px;
     position: relative;
-    top: -89px;
+    top: -68px;
     left: 241px;
   }
   
@@ -2788,7 +2790,7 @@ html {
     font-size: 15px;
     font-weight: 700;
     position: relative;
-    top: -17px;
+    top: 10px;
     bottom: -57px;
     left: 444px;
   }
