@@ -52,8 +52,16 @@ class Theme(View):
     def post(self, request):
         print("Inside theme post")
         theme_choice = request.POST.get("field-2")
-        print("choice:",theme_choice)
-        return render(request, "chat.html")
+        print("theme choice:",theme_choice)
+
+        theme_image = f"themes/{theme_choice}.jpg"
+        theme_video = f"themes/{theme_choice}.mp4"
+        print(theme_video)
+
+        return render(request, "partials/theme_partial.html", {
+            "theme_image": theme_image,
+            "theme_video": theme_video
+        })
     
 
 class Music(View):
@@ -64,5 +72,9 @@ class Music(View):
         print("Inside Music post")
         music_choice = request.POST.get("field-2")
         print("choice:",music_choice)
-        return render(request, "chat.html")
+
+        music_choice_path = f"music/{music_choice}.mp3"
+        print("path:", music_choice_path)
+
+        return render(request, "partials/music_partial.html", {"music_choice_path": music_choice_path})
 

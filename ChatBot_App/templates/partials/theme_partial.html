@@ -1,0 +1,21 @@
+{% load static %}
+
+<div id="theme-container">
+  <video
+    id="4133efa7-b3ff-4d2a-4bfa-2dddc1f0445a-video"
+    autoplay=""
+    loop=""
+    style="
+      background-image: url('{% static theme_image %}');
+    "
+    muted=""
+    playsinline=""
+    data-wf-ignore="true"
+    data-object-fit="cover"
+  >
+    <source
+      src="{% static theme_video %}"
+      type="video/mp4"
+      data-wf-ignore="true"
+    />
+</div>

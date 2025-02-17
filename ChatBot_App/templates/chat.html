@@ -78,12 +78,14 @@
       data-wf-ignore="true"
       class="background-video-3 w-background-video w-background-video-atom"
     >
+
+  <div id="theme-container">
       <video
         id="4133efa7-b3ff-4d2a-4bfa-2dddc1f0445a-video"
         autoplay=""
         loop=""
         style="
-          background-image: url('{% static 'themes/t1.jpg' %}');
+          background-image: url('{% static 'themes/t2.jpg' %}');
         "
         muted=""
         playsinline=""
@@ -91,10 +93,12 @@
         data-object-fit="cover"
       >
         <source
-          src="{% static 'themes/t1.mp4' %}"
+          src="{% static 'themes/t2.mp4' %}"
           type="video/mp4"
           data-wf-ignore="true"
         />
+  </div>
+
         <source
           src="https://cdn.prod.website-files.com/67b0b836ce465610d7189b37%2F67b17081056bd817f138a009_sunset-on-fantasy-castle-moewalls-com-transcode.webm"
           data-wf-ignore="true"
@@ -203,8 +207,10 @@
           <form
             id="email-form-2"
             data-name="Email Form 2"
-            method="POST"
-            action="{% url 'theme' %}"
+            hx-post="{% url 'theme' %}"
+            hx-target="#theme-container"
+            hx-swap="outerHTML"
+
             class="form"
             data-wf-page-id="67b178287aebd44cd279c739"
             data-wf-element-id="f38c5abc-91ee-fbe5-ec0f-1698dc950750"
@@ -238,37 +244,37 @@
             id="email-form-3"
             name="email-form-3"
             data-name="Email Form 3"
-            method="POST"
-            action= "{% url 'music' %}"
+
+            hx-post="{% url 'music' %}"
+            hx-target="#background-music"
+            hx-swap="outerHTML"
+
             data-wf-page-id="67b178287aebd44cd279c739"
             data-wf-element-id="68c5d9ee-4a09-681b-4732-ff58a369f234"
             data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
           >
 
           {% csrf_token %}
-            <input
+            <button
               type="submit"
-              data-wait="Please wait..."
               class="music-submit w-button"
-              value="Save Music"
-            /><label for="theme" class="music-label">Select Music:-</label
+
+            >Save Music</button>
+            
+            <label for="theme" class="music-label">Select Music:-</label
             ><select
               id="theme"
               name="field-2"
               data-name="Field 2"
               class="music-field w-select"
             >
-            <option value="m1">Mute</option>
+            <option value="m0">Mute</option>
               <option value="m1">Music 1</option>
               <option value="m2">Music 2</option>
               <option value="m3">Music 3</option>
               <option value="m4">Music 4</option>
             </select>
           </form>
-
-  
-          <div class="success-message-2 w-form-done"></div>
-          <div class="error-message-2 w-form-fail"></div>
 
     <!-- ******* -->
         </div>
