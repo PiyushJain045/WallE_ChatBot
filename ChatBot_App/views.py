@@ -40,4 +40,4 @@ class Chat(View):
             
         ]
 
-        return render(request, "chat.html", {"chats":chats})
+        return render(request, "partials/chat_messages.html", {"chats":chats})

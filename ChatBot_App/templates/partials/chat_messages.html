@@ -1,0 +1,11 @@
+{% for chat in chats %}
+  {% if chat.role == "user" %}
+    <div class="user-chat">
+      <p class="chat-text">{{ chat.text }}</p>
+    </div>
+  {% elif chat.role == "bot" %}
+    <div class="bot-chat">
+      <p class="chat-text">{{ chat.text|safe }}</p>
+    </div>
+  {% endif %}
+{% endfor %}

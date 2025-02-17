@@ -487,7 +487,7 @@ html {
     border: 0;
   }
   
-  .w-form {
+  /* .w-form {
     margin: 0 0 15px;
   }
   
@@ -503,7 +503,7 @@ html {
     margin-top: 10px;
     padding: 10px;
     display: none;
-  }
+  } */
   
   label {
     margin-bottom: 5px;
@@ -2594,6 +2594,8 @@ html {
     background-color: #cbc5c500;
     font-family: Droid Sans, sans-serif;
     font-size: 17px;
+    padding-left: 10px;
+    padding-top: 5px;
   }
   
   .section-3 {
@@ -2615,6 +2617,10 @@ html {
     bottom: 11px;
     left: 1058px;
   }
+
+  .prompt-div form {
+    display: block !important;
+}
   
   .send-button {
     background-image: url("https://cdn.prod.website-files.com/67b0b836ce465610d7189b37/67b1921d179ff86f42e7cc0e_send-button_16955203.png");
