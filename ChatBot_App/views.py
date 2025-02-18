@@ -26,16 +26,30 @@ class Chat(View):
         return render(request, "chat.html")
 
     def post(self, request):
+
+        if request.user.is_authenticated:
+            user_name = request.user.username
+            print(user_name)
+        else:
+            user_name = ""
+
         print("Inside chat post")
-        prompt = request.POST.get("field")
+
+        user_message = request.POST.get("field")
+        prompt = f"I am using you in my chatbot application called Wall-E, so your name is now Wall-E. The prompts you receive will be from users. Your goal is to keep the conversation as friendly and concise as possible. Use the user's name frequently to make the conversation more immersive. The user's name is {user_name}. That's all. Now, here is the user's prompt: {user_message}"
         print(prompt)
+
+        if request.user.is_authenticated:
+            user_name = request.user.username
+        else:
+            user_name = ""
 
         response = model.generate_content(prompt)
         bot_response = markdown.markdown(response.candidates[0].content.parts[0].text)
         print(bot_response)
 
         chats = [
-            {"role": "user", "text": prompt},
+            {"role": "user", "text": user_message},
             {"role": "bot", "text": bot_response},
             
             
