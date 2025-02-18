@@ -2166,13 +2166,14 @@ html {
     mix-blend-mode: difference;
     background-color: #30303000;
     width: 466px;
-    margin-top: 294px;
-    margin-left: 506px;
+    margin-top: 320px;
+    margin-left: 600px;
     padding-right: 9px;
     font-family: Inconsolata, monospace;
     font-size: 57px;
     transition: opacity .2s cubic-bezier(.6, -.28, .735, .045), opacity .2s;
     box-shadow: 0 2px 5px #0003;
+    text-align: center;
   }
   
   .bg-div {

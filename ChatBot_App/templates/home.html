@@ -34,9 +34,15 @@
     <body class="body">
         <div data-w-id="ac39c250-ccb4-8523-8c47-e068a6af6b4e" class="nav-div">
             <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-                <div class="lr_div"><a href="#">Login</a></div>
+
+        {% if user.is_authenticated %}
+                <div class="lr_div"><a href="{% url 'account_logout' %}">Logout</a></div>
+        {% else %}
+                <div class="lr_div"><a href="{% url 'account_login' %}">Login</a></div>
+        {% endif %}
+
                 <div class="middel-div"><a href="#">Wall-E</a></div>
-                <div class="lr_div"><a href="#">About us</a></div>
+                <div class="lr_div"><a href="http://16.171.33.245:8000/" target="_blank">Ai Tool</a></div>
             </div>
         </div>
         <section class="video-section">
@@ -74,7 +80,7 @@
                         </span>
                     </button>
                 </div>
-                <h1 class="video-heading">The Future Is Ai</h1>
+                <h1 class="video-heading">Welcome,{% if user.is_authenticated %} {{ request.user.username }}! {% else %} Human!{% endif %}<br><br>The Future Is Ai</h1>
             </div>
         </section>
         <div class="spline5">

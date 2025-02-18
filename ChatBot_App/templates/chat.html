@@ -10,7 +10,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>This is were chatting takes place</title>
+    <title>Let's Chat!</title>
     <meta content="This is were chatting takes place" property="og:title" />
     <meta
       content="This is were chatting takes place"
@@ -153,37 +153,8 @@
       <div class="chat-div">
         <div class="div-block-3">
           <div class="bot-chat">
-            <p class="chat-text">Hello, Piyush. How can I help you?</p>
-          </div>
-
-          <div class="user-chat">
-            <p class="chat-text">
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </p>
-          </div>
-
-          <div class="bot-chat">
-            <p class="chat-text">
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </p>
+            <p class="chat-text">Hey there👋, {% if user.is_authenticated %} {{ request.user.username }} {% else %} buddy {% endif %}!
+              I'm Wall-E, your friendly chatbot. What's up? How can I help you today?</p>
           </div>
 
           <div id="chat-container">

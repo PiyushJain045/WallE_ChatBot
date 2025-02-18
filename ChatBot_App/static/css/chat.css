@@ -2551,7 +2551,10 @@ html {
   
   .chat-div {
     scrollbar-width: none; /* Corrected from 'None' to 'none' */
-    border: 9px solid #000; /* Added 'solid' to define border style */
+    border: 9px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 1044px;
     height: 700px;
     margin-top: -557px;
