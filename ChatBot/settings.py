@@ -147,4 +147,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'  
 
 
-CSRF_TRUSTED_ORIGINS = ['https://aiformgenerator.onrender.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://walle-chatbot.onrender.com',
+]
+
