@@ -27,8 +27,8 @@ Wall-E is a friendly AI chatbot built with Django and powered by the **Gemini-Fl
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/PiyushJain045/AiForm-Generator.git
-   cd AiForm-Generator
+   git clone https://github.com/PiyushJain045/WallE_ChatBot.git
+   cd WallE_ChatBot
 
 2. **Setup a Virtual Environment**:
    ```bash
