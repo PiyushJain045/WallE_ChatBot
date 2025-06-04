@@ -1,3 +1,5 @@
+- [Wall-E Chatbot](https://walle-chatbot.onrender.com/) | Note: not optimized for mobile
+
 # 🤖 Wall-E Chatbot
 
 Wall-E is a friendly AI chatbot built with Django and powered by the **Gemini-Flash API**. Inspired by the charming character from the movie "WALL·E", this chatbot offers an immersive, personalized experience with customizable themes and background music.
